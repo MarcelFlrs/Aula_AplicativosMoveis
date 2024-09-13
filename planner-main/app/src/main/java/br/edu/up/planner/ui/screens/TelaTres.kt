@@ -29,8 +29,7 @@ import br.edu.up.planner.ui.screens.util.PlannerTopBar
 
 @Composable
 fun TelaTres(drawerState: DrawerState) {
-    Scaffold(
-        topBar = { PlannerTopBar(drawerState) },
+    Scaffold(topBar = { PlannerTopBar(drawerState) },
         content = { padding -> ConteudoPrincipal(padding) },
         floatingActionButton = { FloatButtom() },
         bottomBar = { BottomAppBarMinima() }
@@ -44,8 +43,7 @@ private fun BottomAppBarMinima() {
         containerColor = Color(0xFF0288D1)
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceAround
+            modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceAround
         ) {
             Icon(
                 imageVector = Icons.Default.Call,
@@ -81,8 +79,7 @@ private fun ConteudoPrincipal(padding: PaddingValues) {
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Tela 3", Modifier.padding(padding),
-            fontSize = 50.sp
+            text = "Tela 3", Modifier.padding(padding), fontSize = 50.sp
         )
     }
 }

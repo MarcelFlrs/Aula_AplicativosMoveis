@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.compose.rememberNavController
 import br.edu.up.planner.ui.screens.TelaTres
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -26,10 +27,12 @@ import br.edu.up.planner.ui.screens.TelaTres
     device = Devices.PIXEL
 )
 @Composable
-fun PlannerApp(){
+fun PlannerApp() {
 
     val drawerState = rememberDrawerState(
-        initialValue = DrawerValue.Closed)
+        initialValue = DrawerValue.Closed
+    )
+    val navController = rememberNavController()
 
     ModalNavigationDrawer(
         drawerState = drawerState,
