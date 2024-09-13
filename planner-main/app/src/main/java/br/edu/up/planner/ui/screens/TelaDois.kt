@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.sp
 import br.edu.up.planner.ui.screens.util.PlannerTopBar
 
 @Composable
-fun TelaUm(drawerState: DrawerState) {
+fun TelaDois(drawerState: DrawerState) {
     Scaffold(
         topBar = { PlannerTopBar(drawerState) },
         content = { padding -> ConteudoPrincipal(padding) },
@@ -81,9 +81,8 @@ private fun ConteudoPrincipal(padding: PaddingValues) {
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Tela 1", Modifier.padding(padding),
+            text = "Tela 2", Modifier.padding(padding),
             fontSize = 50.sp
         )
     }
 }
-

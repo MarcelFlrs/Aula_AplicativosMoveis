@@ -1,7 +1,6 @@
 package br.edu.up.planner
 
 import androidx.compose.foundation.background
-
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -20,7 +19,7 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.edu.up.planner.ui.screens.TelaUm
+import br.edu.up.planner.ui.screens.TelaTres
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(
@@ -35,7 +34,7 @@ fun PlannerApp(){
     ModalNavigationDrawer(
         drawerState = drawerState,
         drawerContent = { DrawerContent() },
-        content = { TelaUm(drawerState) }
+        content = { TelaTres(drawerState) }
     )
 }
 
