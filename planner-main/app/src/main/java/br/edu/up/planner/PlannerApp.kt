@@ -121,9 +121,9 @@ private fun DrawerContent(
                 painter = painterResource(id = R.drawable.checklist),
                 contentDescription = "C",
                 modifier = Modifier.size(40.dp),
-                tint = Color.Black
+                tint = getColorGeral(ehRotaUm)
             )
-            Text(text = "Item 1", fontSize = 30.sp, color = Color.Black)
+            Text(text = "Item 1", fontSize = 30.sp, color = getColorGeral(ehRotaUm))
         }
         TextButton(
             colors = ButtonDefaults.buttonColors(
@@ -142,9 +142,9 @@ private fun DrawerContent(
                 painter = painterResource(id = R.drawable.checklist),
                 contentDescription = "C",
                 modifier = Modifier.size(40.dp),
-                tint = Color.Black
+                tint = getColorGeral(ehRotaDois)
             )
-            Text(text = "Item 2", fontSize = 30.sp, color = Color.Black)
+            Text(text = "Item 2", fontSize = 30.sp, color = getColorGeral(ehRotaDois))
         }
         TextButton(
             colors = ButtonDefaults.buttonColors(
@@ -163,25 +163,25 @@ private fun DrawerContent(
                 painter = painterResource(id = R.drawable.checklist),
                 contentDescription = "C",
                 modifier = Modifier.size(40.dp),
-                tint = Color.Black
+                tint = getColorGeral(ehRotaTres)
             )
-            Text(text = "Item 3", fontSize = 30.sp, color = Color.Black)
+            Text(text = "Item 3", fontSize = 30.sp, color = getColorGeral(ehRotaTres))
         }
     }
 }
 
 fun getColorMenu(estaSelecionada: Boolean): Color {
     if (estaSelecionada){
-        return Color.Yellow
+        return Color.0xFF0288D1
     } else{
         return Color.Transparent
     }
 }
 
-fun getColorTexto(estaSelecionada: Boolean): Color {
+fun getColorGeral(estaSelecionada: Boolean): Color {
     if (estaSelecionada){
         return Color.White
     } else{
-        return Color.Transparent
+        return Color.Black
     }
 }
