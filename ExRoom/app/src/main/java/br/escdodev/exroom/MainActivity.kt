@@ -6,10 +6,12 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.Text
 import androidx.room.Dao
+import androidx.room.Database
 import androidx.room.Delete
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.Query
+import androidx.room.RoomDatabase
 import androidx.room.Upsert
 
 class MainActivity : ComponentActivity() {
@@ -51,5 +53,9 @@ interface AfazerDao{
     @Delete
     fun excluirAfazer(afazer: Afazer)
 
+}
 
+@Database(entities = [Afazer::class], version = 1)
+abstract class afazerDataBase: RoomDatabase(){
+    abstract fun afazerDao(): AfazerDao
 }
