@@ -21,23 +21,36 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent { 
-            AfazeresNavHost()
-             }
+        setContent { AfazeresNavHost() }
     }
 }
 
+object AfazeresRoute {
+    val LISTAR_AFAZERES_SCREEN = "listar_afazeres"
+    val INCLUIR_AFAZER_SCREEN = "incluir_afazer"
+}
+
 @Composable
-fun AfazeresNavHost{
+fun AfazeresNavHost() {
+
+    val navController = rememberNavController()
+
+    NavHost(
+            navController = navController,
+            startDestination = AfazeresRoute.LISTAR_AFAZERES_SCREEN
+    ) {
+        composable(AfazeresRoute.LISTAR_AFAZERES_SCREEN) { ListarAfazeresScreen() }
+
+        composable(AfazeresRoute.INCLUIR_AFAZER_SCREEN) { IncluirAfazerScreen() }
+    }
 
     ListarAfazeresScreen()
     IncluirAfazerScreen()
-
 }
 
 @Composable
 fun ListarAfazeresScreen() {
-    Text(text = "Tela para listar afazeres")
+    Column(modifier = Modifier.padding(50.dp))
 }
 
 @Composable
